@@ -24,10 +24,10 @@ REQUIRED_COLUMNS = {"order_no", "amount", "updated_at"}
 
 
 def collect(input_dir: Path) -> List[dict]:
-    """采集：读取目录下所有 csv 文件。"""
-    files = sorted(input_dir.glob("*.csv"))
+    """采集：读取目录下所有明细 csv，跳过汇总产物文件。"""
+    files = sorted(p for p in input_dir.glob("*.csv") if not p.name.startswith("summary"))
     if not files:
-        raise FileNotFoundError(f"目录下没有 csv 文件：{input_dir}")
+        raise FileNotFoundError(f"目录下没有明细 csv 文件：{input_dir}")
     rows: List[dict] = []
     for f in files:
         with f.open("r", encoding="utf-8-sig", newline="") as fh:
