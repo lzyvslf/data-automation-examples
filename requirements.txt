@@ -1,0 +1,2 @@
+# 本示例集仅使用 Python 标准库，无第三方运行时依赖。
+# 如需在真实环境扩展，可按需补充：pandas、requests、schedule 等。
