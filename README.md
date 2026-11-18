@@ -61,6 +61,11 @@ python examples/requirement_breakdown/build_summary.py \
 - 涉及行情与复盘的示例只讲数据工程与自动化方法，不构成任何投资建议。
 - 不提供绕过平台限制、批量违规采集或灰产相关的实现。
 
+## 联系与合作
+
+- GitHub 主页：https://github.com/lzyvslf
+- 问题与建议：在本仓库 [Issues](https://github.com/lzyvslf/data-automation-examples/issues) 留言。
+
 ## License
 
 MIT
